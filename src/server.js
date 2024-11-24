@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { config } from "dotenv";
-import { testConnection } from "../database/conection.js";
-import { Hotelroutes } from "../router/router.js";
+import { testConnection } from "./database/conection.js";
+import { Hotelroutes } from "./router/router.js";
 config();
 
 const app = express();
