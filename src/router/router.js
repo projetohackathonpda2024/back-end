@@ -71,13 +71,28 @@ Hotelroutes.get("/hotels/by-type/:type", async (req, res) => {
   const { type } = req.params;
 
   try {
-    const hotels = await Hotel.findAll({ where: { tepy: type } });
+    const hotels = await Hotel.findAll({ where: { type: type } });
+    res.json(hotels);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error fetching hotels" });
+  }
+  
+});
+
+Hotelroutes.post("/hotels/by-type", async (req, res) => {
+  const { type } = req.body;
+
+  try {
+    const hotels = await Hotel.findAll({ where: { type: type } });
     res.json(hotels);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error fetching hotels" });
   }
 });
+ 
+
 Hotelroutes.post("/hotels/by-name", async (req, res) => {
   const { name } = req.body;
 
@@ -97,7 +112,7 @@ Hotelroutes.post("/hotels/by-name", async (req, res) => {
 });
 
 
-Hotelroutes.post("/hotelscreat", async (req, res) => {
+Hotelroutes.post("/hotelscreate", async (req, res) => {
   const {
     name,
     type, // Campo "type" desestruturado
