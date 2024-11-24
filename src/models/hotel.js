@@ -66,6 +66,11 @@ const Hotel = sequelize.define("Hotel", {
   cnpj: {
     type: DataTypes.STRING(20),
   },
+  type: {
+    type: DataTypes.STRING, 
+    allowNull: false, 
+  }
 });
+
 
 export { Hotel };

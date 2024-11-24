@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import { config } from "dotenv";
 import { testConnection } from "./database/conection.js";
 import { Hotelroutes } from "./router/router.js";
+import cors from "cors";
 config();
 
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(Hotelroutes);
+app.use(cors({ origin: "*" }));
 
 // Função para enviar uma pergunta ao ChatGPT
 async function consultarChatGPT(pergunta, apiKey) {
