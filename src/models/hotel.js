@@ -8,45 +8,45 @@ const Hotel = sequelize.define("Hotel", {
   },
   name: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   stars: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   latitude: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   longitude: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   description: {
     type: DataTypes.TEXT,
   },
   address: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   district: {
     type: DataTypes.STRING,
   },
   city: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   state: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   country: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   placeId: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   thumb: {
     type: DataTypes.STRING,

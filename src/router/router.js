@@ -128,12 +128,6 @@ Hotelroutes.post("/hotelscreate", async (req, res) => {
     city,
     state,
     country,
-    placeId,
-    thumb,
-    images,
-    amenities,
-    pois,
-    reviews,
     cnpj,
   } = req.body;
 
@@ -150,16 +144,11 @@ Hotelroutes.post("/hotelscreate", async (req, res) => {
       city,
       state,
       country,
-      placeId,
-      thumb,
-      images,
-      amenities,
-      pois,
-      reviews,
       cnpj,
     });
 
-    res.status(201).json(novoHotel);
+    const resposta =res.status(201).json(novoHotel);
+    return resposta
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Erro ao cadastrar hotel" });
