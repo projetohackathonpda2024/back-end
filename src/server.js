@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.use(Hotelroutes);
 
 
-const PORT = 3080;
+const PORT = 3090;
 app.listen(PORT, () => {
   testConnection();
   console.log(`Servidor rodando em http://localhost:${PORT}`);
