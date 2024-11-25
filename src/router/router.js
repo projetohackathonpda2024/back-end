@@ -38,7 +38,8 @@ Hotelroutes.get("/hotels/:id", async (req, res) => {
   try {
     const hotel = await Hotel.findByPk(id);
     if (hotel) {
-      res.json(hotel);
+     const resposta = res.json(hotel);
+     return resposta
     } else {
       res.status(404).json({ error: "Hotel not found" });
     }
@@ -53,7 +54,9 @@ Hotelroutes.get("/hotels/:id", async (req, res) => {
   try {
     const hotel = await Hotel.findByPk(id);
     if (hotel) {
-      res.json(hotel);
+      const resposta = res.json(hotel);
+      console.log(resposta)
+     return resposta;
     } else {
       res.status(404).json({ error: "Hotel not found" });
     }
