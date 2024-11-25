@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import filterGet from "../controller/filterGet.js";
-import searchHotels from "../controller/serachHotels.js";
+import searchHotels from "../controller/searchHotels.js";
 import hotelsByName from "../controller/hotelsByName.js";
 import getHotelById from "../controller/getById.js";
 import createHotel from "../controller/hotelScreat.js";
